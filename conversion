@@ -1,0 +1,89 @@
+#include <stdio.h> 
+int main() 
+{
+float a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x; 
+
+//This is the code for feet to inches 
+printf("Feets to Inches\n"); 
+printf("Enter in feet"); 
+scanf("%f",&a); 
+b=a*12; 
+printf("%f feet to %f inches\n",a,b); 
+
+//This is the code for inches to centimeters 
+printf("Inches to Centimeters\n"); 
+printf("Enter in inch"); scanf("%f",&c); 
+d=c*2.54; 
+printf("%f inches to %f centimeters\n",c,d); 
+
+//This is the code for centimeters to meters 
+printf("Centimeters to meters\n"); 
+printf("Enter in centimeter"); 
+scanf("%f",&e); 
+e=f*0.01; 
+printf("%f centimeters to %f meters\n",e,f); 
+
+//This is the code for kilograms to grams 
+printf("Kilograms to grams\n"); 
+printf("Enter in kilogram"); 
+scanf("%f",&g); 
+h=g*1000; 
+printf("%f kilograms to %f grams\n",g,h);
+
+//This is the code for grams to milligrams 
+printf("Grams to Milligrams\n"); 
+printf("Enter in grams"); 
+scanf("%f",&i); 
+j=i*1000; 
+printf("%f grams to %f milligrams\n",i,j); 
+
+//This is the code for Dollar to Rupees 
+printf("Dollars to Rupees\n"); 
+printf("Enter in Dollar"); 
+scanf("%f",&k); 
+l=k*83.99; 
+printf("%f Dollars to %f Rupees\n",k,l); 
+
+//This is the code for Euro to Rupees 
+printf("Euros to Rupees\n"); 
+printf("Enter in Euro"); scanf("%f",&m); 
+n=m*92.64; 
+printf("%f Euros to %f Rupees\n",m,n); 
+
+//This is the code for Degree to Farhenheit 
+printf("Degrees to Farhenheit\n"); 
+printf("Enter in Degree"); 
+scanf("%f",&o); 
+p=o*32; 
+printf("%f Degrees to %f Farhrenheit\n",o,p); 
+
+//This is the code for Days to Years 
+printf("Days to Years\n"); 
+printf("Enter in Days"); 
+scanf("%f",&q);
+r=q*0.00273973; 
+printf("%f Days to %f Years\n",q,r); 
+
+//This is the code for Years to Days 
+printf("Years to Days\n"); 
+printf("Enter in Years"); 
+scanf("%f",&s); 
+t=s*365; 
+printf("%f Years to %f Days\n",s,t); 
+
+//This is the code for Weeks to Days 
+printf("Weeks to Days\n"); 
+printf("Enter in Weeks"); 
+scanf("%f",&u); 
+v=u*7; 
+printf("%f weeks to %f Days\n",u,v); 
+
+//THis is the code for Days to Weeks 
+printf("Days to Weeks\n"); 
+printf("Enter in Days"); 
+scanf("%f",&w); 
+x=w*0.142857; 
+printf("%f Days to %f Weeks\n",w,x); 
+
+return 0; 
+}
