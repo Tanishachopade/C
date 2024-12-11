@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+int count=0,i;
+char arr[50];
+printf("Enter the string:");
+scanf("%s",arr);
+
+for(i=0;arr[i]!='\0';i++)
+{
+count++;
+}
+printf("The number of characters are:%d",count);
+return 0;
+}
