@@ -1,9 +1,0 @@
-#include <stdio.h>
-#include<string.h>
-int main() {
-int i; char sn[60];
-printf("Enter the sentence : ");
-fgets(sn ,sizeof(sn) ,stdin); //save the input sentence
-printf("%d",strlen(sn));
-return 0;
-}
