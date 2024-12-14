@@ -7,3 +7,5 @@ char str[]="Hello World";
 printf("%d",strlen(str));
 return 0;
 }
+
+//does not null character
