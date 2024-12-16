@@ -1,0 +1,77 @@
+#include <stdio.h>
+struct Employees{
+char name[20];
+int e_id;
+int salary;
+long int contact_no;
+};
+int main(){
+struct Employees e[5];
+for(int i=0; i<5; i++){
+printf("enter information of employee %d \n", i+1);
+
+scanf("%s", e[i].name);
+scanf("%d", &e[i].e_id);
+scanf("%d", &e[i].salary);
+scanf("%ld", &e[i].contact_no);
+}
+int ch;
+int choice;
+int enter_id;
+do {
+printf(“enter 1 for printing details of all employees \n enter 2 for searching an
+employee by ID \n enter 3 for printing information of employees having salary
+>10000 \n enter 4 for updating the contact number of a particular employee \n”);
+printf("enter choice of operation \n");
+scanf("%d", &choice);
+switch(choice){
+
+case 1: for(int i=0; i<5; i++){
+printf("name of employee %d is %s \n", i+1, e[i].name);
+printf("id number of employee %d is %d \n", i+1, e[i].e_id);
+printf("salary of employee %d is %d \n", i+1, e[i].salary);
+printf("contact number of employee %d is %ld \n", i+1, e[i].contact_no);
+}
+break;
+case 2: printf("enter id to be searched \n");
+scanf("%d", &enter_id);
+for(int i=0; i<5; i++){
+if(e[i].e_id==enter_id){
+printf("name of employee %d is %s \n", i+1, e[i].name);
+printf("id number of employee %d is %d \n", i+1, e[i].e_id);
+printf("salary of employee %d is %d \n", i+1, e[i].salary);
+printf("contact number of employee %d is %ld \n", i+1, e[i].contact_no);
+}
+break;
+}
+
+break;
+case 3:
+for(int i=0; i<5; i++){
+if(e[i].salary>10000){
+printf("name of employee %d is %s \n", i+1, e[i].name);
+printf("id number of employee %d is %d \n", i+1, e[i].e_id);
+printf("salary of employee %d is %d \n", i+1, e[i].salary);
+printf("contact number of employee %d is %ld \n", i+1, e[i].contact_no);
+}
+}
+break;
+case 4: printf("enter the id of employee whose contact number is to be updated
+\n");
+scanf("%d", &enter_id);
+for(int i=0; i<5; i++){
+if(e[i].e_id==enter_id){
+printf("original contact number is %ld \n", e[i].contact_no);
+e[i].contact_no=8989898989;
+printf("updated contact number is %ld \n", e[i].contact_no);
+break;
+}
+break;
+}
+default: printf("invalid input! ");
+}
+printf(“enter 1 to continue or 0 to stop /n”);
+} //end of do block
+while(ch!=0);
+return 0;
+}
