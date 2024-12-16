@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <string.h>
+
+// Function prototypes
+void Encryption(char str[], int key);
+void Decryption(char str[], int key);
+
+int main()
+{
+char str[100];
+int key,n,y;
+do
+{
+// Accept the string from the user
+printf("Enter a string: ");
+scanf("%s", str);
+// Accept the key from the user
+printf("Enter the key: ");
+scanf("%d", &key);
+
+// Display options to the user
+printf("Choose an option:\n1. Encryption \n2. Decryption \n3. Exit");
+scanf("%d", &n);
+
+switch (n)
+{
+case 1:
+Encryption(str, key);
+break;
+case 2:
+Decryption(str, key);
+break;
+case 3:
+printf("Exiting...\n");
+break;
+default:
+printf("Invalid choice!\n");
+}
+
+printf("Do you want to continue? \n1.Yes \n2.No ");
+scanf("%d",y);
+}while(y==1);
+return 0;
+}
+
+// Encryption function
+void Encryption(char str[], int key)
+{
+for (int i = 0; i < strlen(str); i++)
+{
+if(str[i]>='a' && str[i] <= 'z')
+{
+str[i]=(str[i] - 'a' + key) % 26 + 'a';
+}
+else if(str[i]>='A' && str[i] <= 'Z')
+{
+str[i]=(str[i] - 'A' + key) % 26 + 'A';
+}
+else if(str[i]>='0' && str[i] <= '9')
+{
+str[i]=(str[i] - '0' + key) % 10 + '0';
+}
+}
+printf("Encrypted string: %s\n", str);
+}
+
+// Decryption function
+void Decryption(char str[], int key)
+{
+for (int i = 0; i < strlen(str); i++)
+{
+
+if(str[i]>='a' && str[i] <= 'z')
+{
+str[i]=(str[i] - 'a' - key + 26) % 26 + 'a';
+}
+else if(str[i]>='A' && str[i] <= 'Z')
+{
+str[i]=(str[i] - 'A' - key + 26) % 26 +'A';
+}
+else if(str[i]>='0' && str[i] <= '9')
+{
+str[i]=(str[i] - '0' - key + 10) % 10 + '0';
+}
+}
+printf("Decrypted string: %s\n", str);
+}
+
+
