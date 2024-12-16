@@ -25,6 +25,7 @@ scanf("%s", b[i].address);
 getchar();
 scanf("%d", &b[i].balance);
 }
+
 int ch;
 printf("\nChoose the correct option:\n");
 printf("1. Display the details of all bank holders.\n");
@@ -49,38 +50,38 @@ default: printf("invalid number entered! ");
 }
 printf("enter 1 or 0");
 scanf("%d", &ch);
-
 }
-while(ch!=0);
 return 0;
 }
 
 void display(struct Bank b[5]){
-for(int i=0; i<5; i++){
-printf("name of account holder %d is %s \n", i+1, b[i].name);
-printf("account number of account holder %d is %d \n", i+1, b[i].acc_no);
-printf("contact number of account holder %d is %ld \n", i+1, b[i].contact_no);
-printf("address of account holder %d is %s \n", i+1, b[i].address);
-printf("bank balance of account holder %d is %d \n", i+1, b[i].balance);
+for(int i=0; i<5; i++)
+{
+printf("name of account holde is %s \n",b[i].name);
+printf("account number of account holder is %d \n",b[i].acc_no);
+printf("contact number of account holder is %ld \n",b[i].contact_no);
+printf("address of account holder is %s \n",b[i].address);
+printf("bank balance of account holder is %d \n",b[i].balance);
 }
 return;
 }
 
 void search(struct Bank b[5]){
-char a_name[10];
+char name[10];
 printf("enter name to be searched \n");
-scanf("%s", a_name);
+scanf("%s",name);
 getchar();
 printf("enter account number to be searched \n");
 int a_no;
 scanf("%d", &a_no);
 for(int i=0; i<25 i++){
-if(strcmp(a_name, b[i].name)==0 && b[i].acc_no==a_no){
-printf("name of account holder %d is %s \n", i+1, b[i].name);
-printf("account number of account holder %d is %d \n", i+1, b[i].acc_no);
-printf("contact number of account holder %d is %ld \n", i+1, b[i].contact_no);
-printf("address of account holder %d is %s \n", i+1, b[i].address);
-printf("bank balance of account holder %d is %d", i+1, b[i].balance);
+if(strcmp(name, b[i].name)==0 && b[i].acc_no==a_no)
+{
+printf("name of account holder is %s \n",b[i].name);
+printf("account number of account holder is %d \n",b[i].acc_no);
+printf("contact number of account holder is %ld \n",b[i].contact_no);
+printf("address of account holder is %s \n",b[i].address);
+printf("bank balance of account holder is %d",b[i].balance);
 }
 break;
 }
@@ -94,8 +95,10 @@ printf("enter account to be deposited in \n");
 scanf("%d", &a_no);
 printf("enter money to be deposited \n");
 scanf("%d", &deposit);
-for(int i=0; i<5; i++){
-if(b[i].acc_no==a_no){
+for(int i=0; i<5; i++)
+{
+if(b[i].acc_no==a_no)
+{
 printf("original bank balance is %d \n", b[i].balance);
 b[i].balance+=deposit;
 printf("updated bank balance is %d \n", b[i].balance);
@@ -112,8 +115,10 @@ int withdraw;
 scanf("%d", &a_no);
 printf("enter money to be withdrawn \n");
 scanf("%d", &withdraw);
-for(int i=0; i<5; i++){
-if(b[i].acc_no==a_no){
+for(int i=0; i<5; i++)
+{
+if(b[i].acc_no==a_no)
+{
 printf("original bank balance is %d \n", b[i].balance);
 b[i].balance-=withdraw;
 printf("updated bank balance is %d \n", b[i].balance);
