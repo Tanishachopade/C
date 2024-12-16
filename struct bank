@@ -3,7 +3,7 @@
 struct Bank{
 char name[20];
 int acc_no;
-long int contact_no;
+int contact_no;
 char address[20];
 int balance;
 }
@@ -11,10 +11,12 @@ void display(struct Bank b[2]);
 void search(struct Bank b[2]);
 void deposit_in_acc(struct Bank b[2]);
 void withdraw_from_acc(struct Bank b[2]);
-int main(){
+int main()
+{
 
-for(int i=0; i<5; i++){
-printf("enter information of account holder %d \n", i+1);
+for(int i=0; i<5; i++)
+{
+printf("enter information of account holder %d \n");
 scanf("%s", b[i].name);
 getchar();
 scanf("%d", &b[i].acc_no);
@@ -24,15 +26,17 @@ getchar();
 scanf("%d", &b[i].balance);
 }
 int ch;
-do{
-int choice;
-printf(“enter 1 for printing details of all account holders \n enter 2 for searching an
-account holder by name and acc_no \n enter 3 for depositing money in a
-particular account \n enter 4 for withdrawing money from a particular account
-\n”);
-printf("enter choice of operation \n");
-scanf("%d", &choice);
-switch(choice){
+printf("\nChoose the correct option:\n");
+printf("1. Display the details of all bank holders.\n");
+printf("2. Search account holder details by account number.\n");
+printf("3. Search account holder details by name.\n");
+printf("4. Deposit money into an account.\n");
+printf("5. Withdraw money from an account.\n");
+printf("Enter your choice: ");
+scanf("%d", &ch);
+
+
+switch (ch){
 case 1: display(b);
 break;
 case 2: search(b);
@@ -50,6 +54,7 @@ scanf("%d", &ch);
 while(ch!=0);
 return 0;
 }
+
 void display(struct Bank b[5]){
 for(int i=0; i<5; i++){
 printf("name of account holder %d is %s \n", i+1, b[i].name);
@@ -60,6 +65,7 @@ printf("bank balance of account holder %d is %d \n", i+1, b[i].balance);
 }
 return;
 }
+
 void search(struct Bank b[5]){
 char a_name[10];
 printf("enter name to be searched \n");
@@ -98,6 +104,7 @@ break;
 }
 return;
 }
+
 void withdraw_from_acc(struct Bank b[5]){
 printf("enter account to be withdrawn from \n");
 int a_no;
