@@ -46,7 +46,7 @@ return 0;
 // Encryption function
 void Encryption(char str[], int key)
 {
-for (int i = 0; i < strlen(str); i++)
+for (int i = 0; i < strlen(str)-1; i++)
 {
 if(str[i]>='a' && str[i] <= 'z')
 {
@@ -67,7 +67,7 @@ printf("Encrypted string: %s\n", str);
 // Decryption function
 void Decryption(char str[], int key)
 {
-for (int i = 0; i < strlen(str); i++)
+for (int i = 0; i < strlen(str)-1; i++)
 {
 
 if(str[i]>='a' && str[i] <= 'z')
